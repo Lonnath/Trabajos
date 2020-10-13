@@ -203,4 +203,15 @@ public class SopaBinaria {
     public int[][] getPaintSopa(){
         return this.paintSopa;
     }
+    public void setPaintSopa(){
+        this.paintSopa =null;
+    }
+    
+    public void setPaintSopaTotal(){
+        for (int i = 0; i < this.paintSopa.length; i++) {
+            for (int j = 0; j < this.paintSopa[0].length; j++) {
+                this.paintSopa[i][j] = 0;
+            }
+        }
+    }
 }

@@ -166,7 +166,7 @@ public class GuiBinaria extends javax.swing.JFrame {
         } else {
             int veces = sopa.getCuantasVeces_Diagonal(Integer.parseInt(this.numero.getText())) + sopa.getCuantasVeces_Vertical(Integer.parseInt(this.numero.getText())) + sopa.getCuantasVeces_Horizontal(Integer.parseInt(this.numero.getText()));
             this.out.setText("Se encontro del número decimal " + this.numero.getText() + " en binario : " + this.sopa.convertirBinario(Integer.parseInt(this.numero.getText())) + "\n" + veces + " incidencias.");
-
+           
         }
     }//GEN-LAST:event_btnNumeroActionPerformed
 
@@ -187,6 +187,7 @@ public class GuiBinaria extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCargarActionPerformed
 
     private void pdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pdfActionPerformed
+           
         try {
             Document documento = new Document();
             FileOutputStream archivoPdf = new FileOutputStream("src/PDF_Generado/archivo.pdf");
@@ -225,6 +226,7 @@ public class GuiBinaria extends javax.swing.JFrame {
             documento.close();
         } catch (Exception e) {
         }
+         this.sopa.setPaintSopaTotal();
     }//GEN-LAST:event_pdfActionPerformed
 
     /**
